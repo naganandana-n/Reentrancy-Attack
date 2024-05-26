@@ -2,7 +2,7 @@
 
 This repository demonstrates the Reentrancy attack on a smart contract and presents solutions to mitigate it.
 
-## Files in the Repository
+## Files
 
 - **Attacker.sol**: Smart contract that performs the reentrancy attack.
 - **Bank - Vulnerable.sol**: Vulnerable bank contract that is susceptible to reentrancy attack.
@@ -34,19 +34,19 @@ This contract uses OpenZeppelin's ReentrancyGuard to prevent reentrancy attacks.
 ## Images
 
 ### 1. Bank Balance
-
+<img src="https://github.com/naganandana-n/Reentrancy-Attack/blob/main/images/Bank%20Balance.png">
 This image shows the initial balance of the bank contract.
 
 ### 2. Output - Vulnerable Bank
-
+<img src="https://github.com/naganandana-n/Reentrancy-Attack/blob/main/images/Output%20-%20Vulnerable%20Bank.png">
 This image shows the console output when the attacker contract successfully performs a reentrancy attack on the vulnerable bank contract.
 
 ### 3. Output - Logical Solution
-
+<img src="https://github.com/naganandana-n/Reentrancy-Attack/blob/main/images/Output%20-%20Logical%20Solution.png">
 This image shows the console output when the attacker contract attempts to attack the bank contract with a logical solution in place.
 
 ### 4. Output - Reentrancy Guard
-
+<img src="https://github.com/naganandana-n/Reentrancy-Attack/blob/main/images/Output%20-%20Reentrancy%20Guard.png">
 This image shows the console output when the attacker contract attempts to attack the bank contract that implements the ReentrancyGuard.
 
 ## How to Run
@@ -55,7 +55,3 @@ This image shows the console output when the attacker contract attempts to attac
 2. Open the Remix IDE.
 3. Upload the smart contract files to Remix IDE.
 4. Deploy the bank contracts and the attacker contract as needed and observe the outputs in the Remix IDE console.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
