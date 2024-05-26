@@ -8,9 +8,12 @@ A reentrancy attack occurs when a malicious contract calls a function in a vulne
 
 - **Attacker.sol**: \
   This contract is used to perform the reentrancy attack on the Bank contract(s).
-- **Bank - Vulnerable.sol**: This contract is vulnerable to reentrancy attacks.
-- **Bank - Logical Solution.sol**: This contract uses a logical solution to prevent reentrancy attacks by updating the balance before sending funds.
-- **Bank - Reentrancy Guard Solution.sol**: This contract uses OpenZeppelin's ReentrancyGuard to prevent reentrancy attacks.
+- **Bank - Vulnerable.sol**: \
+  This contract is vulnerable to reentrancy attacks.
+- **Bank - Logical Solution.sol**: \
+  This contract uses a logical solution to prevent reentrancy attacks by updating the balance before sending funds.
+- **Bank - Reentrancy Guard Solution.sol**: \
+  This contract uses OpenZeppelin's ReentrancyGuard to prevent reentrancy attacks.
 
 ## Images
 
