@@ -2,13 +2,6 @@
 
 This repository demonstrates the Reentrancy attack on a smart contract and presents solutions to mitigate it.
 
-## Files
-
-- **Attacker.sol**: Smart contract that performs the reentrancy attack.
-- **Bank - Vulnerable.sol**: Vulnerable bank contract that is susceptible to reentrancy attack.
-- **Bank - Logical Solution.sol**: Improved bank contract with a logical solution to prevent reentrancy.
-- **Bank - Reentrancy Guard Solution.sol**: Bank contract implementing OpenZeppelin's ReentrancyGuard to prevent reentrancy.
-
 ## Reentrancy Attack Overview
 
 A reentrancy attack occurs when a malicious contract calls a function in a vulnerable contract, and then recursively calls back into the vulnerable contract before the first invocation finishes. This can lead to unexpected behavior and potentially the draining of funds from the vulnerable contract.
