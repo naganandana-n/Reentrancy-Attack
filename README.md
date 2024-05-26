@@ -6,26 +6,19 @@ A reentrancy attack occurs when a malicious contract calls a function in a vulne
 
 ## Smart Contract Details
 
-- **Attacker.sol**: This contract is used to perform the reentrancy attack on the `EtherBank` contract.
+- **Attacker.sol**: This contract is used to perform the reentrancy attack on the Bank contract(s).
 - **Bank - Vulnerable.sol**: This contract is vulnerable to reentrancy attacks.
 - **Bank - Logical Solution.sol**: This contract uses a logical solution to prevent reentrancy attacks by updating the balance before sending funds.
 - **Bank - Reentrancy Guard Solution.sol**: This contract uses OpenZeppelin's ReentrancyGuard to prevent reentrancy attacks.
 
 ## Images
 
-### 1. Bank Balance
 <img src="https://github.com/naganandana-n/Reentrancy-Attack/blob/main/images/Bank%20Balance.png">
 This image shows the initial balance of the bank contract.
-
-### 2. Output - Vulnerable Bank
 <img src="https://github.com/naganandana-n/Reentrancy-Attack/blob/main/images/Output%20-%20Vulnerable%20Bank.png">
 This image shows the console output when the attacker contract successfully performs a reentrancy attack on the vulnerable bank contract.
-
-### 3. Output - Logical Solution
 <img src="https://github.com/naganandana-n/Reentrancy-Attack/blob/main/images/Output%20-%20Logical%20Solution.png">
 This image shows the console output when the attacker contract attempts to attack the bank contract with a logical solution in place.
-
-### 4. Output - Reentrancy Guard
 <img src="https://github.com/naganandana-n/Reentrancy-Attack/blob/main/images/Output%20-%20Reentrancy%20Guard.png">
 This image shows the console output when the attacker contract attempts to attack the bank contract that implements the ReentrancyGuard.
 
