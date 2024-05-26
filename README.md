@@ -35,5 +35,5 @@ This image shows the console output when the attacker contract attempts to attac
 
 ## References
 
-[Reentrancy Attack | Smart Contract Security Tutorial Part 2](https://www.youtube.com/watch?v=3sIwIYfeOD8)
+[Reentrancy Attack | Smart Contract Security Tutorial Part 2](https://www.youtube.com/watch?v=3sIwIYfeOD8) \
 Note: The code linked to the video may have had issues, which have been addressed and fixed in this repository.
