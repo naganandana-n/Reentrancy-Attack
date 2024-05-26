@@ -29,6 +29,11 @@ This image shows the console output when the attacker contract attempts to attac
 ## How to Run
 
 1. Clone the repository.
-2. Open the Remix IDE.
+2. Open [Remix IDE](http://remix.ethereum.org/).
 3. Upload the smart contract files to Remix IDE.
 4. Deploy the bank contracts and the attacker contract as needed and observe the outputs in the Remix IDE console.
+
+## References
+
+[Reentrancy Attack | Smart Contract Security Tutorial Part 2](https://www.youtube.com/watch?v=3sIwIYfeOD8)
+Note: The code linked to the video may have had issues, which have been addressed and fixed in this repository.
