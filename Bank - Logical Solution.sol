@@ -1,12 +1,12 @@
+// LOGICAL SOLUTION TO VULNERABLE BANK SMART CONTRACT
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.11;
 
 import "@openzeppelin/contracts/utils/Address.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "hardhat/console.sol";
 
-// IMPORTING AND USING REENTRANCY GUARD
-contract EtherBank is ReentrancyGuard{
+contract EtherBank{
     using Address for address payable;
 
     // keeps track of all savings account balances
@@ -18,7 +18,7 @@ contract EtherBank is ReentrancyGuard{
     }
 
     // withdraw all funds from the user's account
-    function withdraw() external nonReentrant{
+    function withdraw() external{
         require(balances[msg.sender] > 0, "Withdrawl amount exceeds available balance.");
         
         console.log("");
@@ -26,9 +26,11 @@ contract EtherBank is ReentrancyGuard{
         console.log("Attacker balance: ", balances[msg.sender]);
         console.log("");
 
-        // WE DON'T USE THE LOGICAL SOLUTION HERE
-        payable(msg.sender).sendValue(balances[msg.sender]);
+        // CHANGES MADE HERE TO PREVENT REENTRANCY ATTACK
+        uint accountBalance = balances[msg.sender]; 
         balances[msg.sender] = 0;
+        payable(msg.sender).sendValue(accountBalance); 
+        
     }
 
     // check the total balance of the EtherBank contract
